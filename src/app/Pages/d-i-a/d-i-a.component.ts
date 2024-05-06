@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrl: './d-i-a.component.scss'
 })
 export class DIAComponent {
-
+  
 }

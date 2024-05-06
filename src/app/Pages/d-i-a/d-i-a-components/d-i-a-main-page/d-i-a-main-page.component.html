@@ -23,23 +23,23 @@
         <div class="contact-right">
             <form action="#" method="post">
                 <div class="column">
-                  <label for="the-name">Your Name</label>   
-                  <input type="text" name="name" id="the-name">
+                  <label for="the-name">Your Name</label>
+                  <input type="text" name="the-name" [(ngModel)]="this.setValue.name" id="the-name" style="color: black;">
               
                   <label for="the-email">Email Address</label>
-                  <input type="email" name="email" id="the-email">
+                  <input type="email" name="the-email" [(ngModel)]="this.setValue.email" id="the-email" style="color: black;">
               
                   <label for="the-phone">Phone Number</label>
-                  <input type="tel" name="phone" id="the-phone">
+                  <input type="number" name="the-phone" [(ngModel)]="this.setValue.phoneNumber" id="the-phone" style="color: black;">
                 </div>
                 <div class="column">
                   <label for="the-message">Message</label>
-                  <textarea name="message" id="the-message"></textarea>
+                  <textarea name="the-message" [(ngModel)]="this.setValue.message" id="the-message" style="color: black;"></textarea>
                 </div>
                 <label style="display: block;">
                 <input type="checkbox" name="newsletter"> Join our mailing list?
                 </label>
-                <input type="submit" value="Send Message">
+                <input type="submit" (click)="setContact()" value="Send Message">
               </form>
         </div>
     </div>
