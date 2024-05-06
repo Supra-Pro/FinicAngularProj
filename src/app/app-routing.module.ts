@@ -23,6 +23,8 @@ import { DostavkaComponent } from './Pages/dostavka/dostavka.component';
 import { GarantiyaComponent } from './Pages/garantiya/garantiya.component';
 import { DIAComponent } from './Pages/d-i-a/d-i-a.component';
 import { DileramComponent } from './Pages/dileram/dileram.component';
+import { MainNavbarComponent } from './Components/main-navbar/main-navbar.component';
+import { CompComponent } from './Pages/comp/comp.component';
 
 
 const routes: Routes = [
@@ -31,7 +33,9 @@ const routes: Routes = [
   {path: 'logout', component: LogoutComponent, canActivate: [logoutGuard]},
   {path: 'register', component: RegisterComponent, canActivate: [registerGuard]},
   {path: 'reset', component: ResetPasswordComponent},
-  {path: 'emailRequest', component: EmailRequestComponent}, // guard needed
+  {path: 'main-navbar', component: MainNavbarComponent},
+  {path: 'comp',  component: CompComponent},
+  {path: 'emailRequest', component: EmailRequestComponent}, 
   {path: 'user-profile', component: UserProfileComponent, canActivate: [userGuard]}, // guard needed
   {path: 'admin-profile', component: AdminProfileComponent, canActivate: [loginGuard]},
   {path: 'catalog', component: ProyektAdminComponent, canActivate: [catalogGuard]}, // to be fixed
@@ -43,7 +47,7 @@ const routes: Routes = [
   // {path: 'novosti-in', component: , canActivate: [novostiGuard]},
   {path: 'contact', component: KontaktComponent, canActivate: [contactGuard]},
   {path: 'd-i-a', component: DIAComponent, canActivate: [contactGuard]},
-  {path: 'd', component: DileramComponent, canActivate: [contactGuard]},
+  {path: 'dileram', component: DileramComponent, canActivate: [contactGuard]},
   {path: 'uslogi', component: UslugiComponent, canActivate: [uslogiGuard]},
   {path: 'zashita-proekti', component: ZashitaProektiComponent, canActivate: [zashitaproektiGuard]},
   {path: 'proyekt', component: ProyektComponent, canActivate: [proyektGuard]},

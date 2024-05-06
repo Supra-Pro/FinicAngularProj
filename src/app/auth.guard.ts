@@ -83,7 +83,7 @@ export const userGuard: CanActivateFn = (route, state) => {
       router.navigate(['/admin-profile'])
       return true
     } else if(element == 'User') {
-      console.log('student profilega navigate');
+      console.log('user profilega navigate');
       router.navigate(['/user-profile'])
       return true
     }
