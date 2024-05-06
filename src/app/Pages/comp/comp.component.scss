@@ -69,3 +69,27 @@ span{
     height: 400px;
     margin-left: 140px;
 }
+
+
+.tit {
+    display: flex;
+    justify-content: space-between;
+}
+.tit .h1 {
+    width: 65%;
+}
+.tit .p {
+    width: 35%;
+}
+
+@media (max-width: 56rem) {
+    .tit {
+        display: block;
+    }
+    .tit .h1 {
+        width: 100%;
+    }
+    .tit .p {
+        width: 100%;
+    }
+  }

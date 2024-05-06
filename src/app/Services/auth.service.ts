@@ -15,6 +15,7 @@ import { Catigory } from '../Interfaces/catigory';
 import { Portfolio } from '../Interfaces/portfolio';
 import { ProyektDTO } from '../Interfaces/proyekt-dto';
 import { Contact } from '../Interfaces/contact';
+import { Catalogproduct } from '../Interfaces/catalogproduct';
 
 @Injectable({
   providedIn: 'root'
@@ -134,5 +135,14 @@ export class AuthService {
     return this.http.post<Contact>(this.contactUrl + 'ContactPageRequests/CreateUserRequest', data);
   }
 
+  // ulaaaaash =================>>>>  catalogs
 
+
+  catalogUrl: string = "https://localhost:7239/api/";
+
+  catalogProduct?:Catalogproduct;
+
+  getAllCatalogProducts(): Observable<Catalogproduct[]> {
+    return this.http.get<Catalogproduct[]>(this.catalogUrl + 'Product/GetAllProducts');
+  }
 }
