@@ -71,10 +71,10 @@ export class AuthService {
     for (let index = 0; index < data.length; index++) {
       const element = data[index];
       if(element == 'Admin'){
-        this.router.navigate(['/user-profile']);
-        return true;
-      } else if(element == 'Admin'){
         this.router.navigate(['/admin-profile']);
+        return true;
+      } else if(element == 'User'){
+        this.router.navigate(['/user-profile']);
         return true;
       }
     }
